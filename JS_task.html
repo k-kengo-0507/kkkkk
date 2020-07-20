@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JStask</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <style>
+    #push-popup{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 300px;
+    }
+   .popup {
+    position: relative;
+    top:150px;
+  left: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+border-radius: 5% 5% 5% 5%;
+  opacity: 0;
+}
+ .popup.is-show {
+      position: absolute;
+      top:260px;
+      left: 330px;
+height: 100px;
+width: 200px;
+background-color: skyblue;
+border-radius: 5% 5% 5% 5%;
+  opacity: 0.5; 
+} 
+.popup-inner {
+  position: absolute;
+  left: 135px;
+  top: -50px;
+  width: 80%;
+  padding: 50px;
+  opacity: 1;
+}
+.close-btn {
+  cursor: pointer;
+} 
+
+  </style>
+</head>
+<body>
+
+  <button id="push-popup">push</button>
+  <div class="popup" id="js-popup">
+    <div class="popup-inner">
+      <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+      
+    </div>
+  </div>
+     
+    <script src="js/JS_task.js"></script>
+</body>
+</html>
