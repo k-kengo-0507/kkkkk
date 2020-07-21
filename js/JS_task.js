@@ -1,21 +1,21 @@
 'use strict'
 
 function popupDisplay() {
-  let popup = document.getElementById('js-popup');
-  if(!popup) return;
-
+    const popup = document.getElementById('js-popup');
+    if(!popup) return;
   
-  let closeBtn = document.getElementById('js-close-btn');
-  let showBtn = document.getElementById('push-popup');
-
-  closePopUp(closeBtn);
-  closePopUp(showBtn);
-
-  function closePopUp(elem) {
-    if(!elem) return;
-    elem.addEventListener('click', ()=> {
-      popup.classList.toggle('is-show');
-    });
+    const blackBg = document.getElementById('js-black-bg');
+    const closeBtn = document.getElementById('js-close-btn');
+    const showBtn = document.getElementById('push-popup');
+  
+    closePopUp(blackBg);
+    closePopUp(closeBtn);
+    closePopUp(showBtn);
+    function closePopUp(elem) {
+      if(!elem) return;
+      elem.addEventListener('click', function() {
+        popup.classList.toggle('is-show');
+      });
+    }
   }
-}
-popupDisplay();
+  popupDisplay();
